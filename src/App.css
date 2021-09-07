@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&family=Roboto:wght@100&family=Space+Mono&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("./images/pexels-monstera-7412050.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: "Poppins", "Roboto", sans-serif;
+}
+
+/* Title Styles */
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 20px auto;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.title .icon {
+  width: 6rem;
+  height: 6rem;
+}
+
+.title span {
+  margin-left: 20px;
+  font-size: 2rem;
+}
+
+/* AddBar Styles */
+.add-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+  margin: 50px auto 10px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.add-bar .icon {
+  width: 2rem;
+  height: 2rem;
+  color: #000;
+}
+
+.add-bar span {
+  margin-right: 20px;
+  font-size: 1.5rem;
+}
+
+/* TimeZoneWrapper */
+.time-zone-wrapper {
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 85%;
+  justify-content: center;
+  padding: 0 30px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* TimeZoneThumb */
+.time-zone-thumb {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 310px;
+  min-width: 200px;
+  padding: 5px;
+  margin: 30px auto;
+  font-size: 1.2rem;
+  border: 5px solid rgba(255, 255, 255, 0.712);
+  border-radius: 5px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4));
+  box-shadow: 4px 3px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.time-zone-thumb select {
+  font-size: 0.9rem;
+  width: 75%;
+}
+
+/* Delete Button */
+.delete-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  padding: 5px 10px;
+  border: 2px solid rgba(221, 36, 36, 0.932);
+  border-radius: 20px;
+  cursor: pointer;
+  color: rgba(221, 36, 36, 0.932);
+}
+
+.delete-btn.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Spinner*/
+.spinner {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  border-top: 3px solid #000;
+  animation: spin 0.4s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.digital-clock {
+  padding-top: 44px;
+  margin-bottom: 30px;
+  font-size: 2.3rem;
+  font-family: "Space Mono", monospace;
+}
+
+/* Clock Type Labels*/
+.clock-labels {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.clock-labels input {
+  margin: 0 0 0 20px;
+}
