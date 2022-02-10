@@ -9,7 +9,7 @@ const TimeZoneWrapper = ({ timezoneThumbs, removeTimeZone }) => {
     (async () => {
       try {
         const response = await fetch(
-          "http://api.timezonedb.com/v2.1/list-time-zone?key=3S8CT06GEKID&format=json"
+          `http://api.timezonedb.com/v2.1/list-time-zone?key=${process.env.KEY}&format=json`
         );
         const data = await response.json();
         const zones = data.zones.map((zone) => zone.zoneName).sort();

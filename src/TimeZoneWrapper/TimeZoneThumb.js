@@ -5,7 +5,7 @@ import Spinner from "../components/Spiner";
 import TypeLabels from "../components/TypeLabels";
 import DeleteButton from "../components/DeleteButton";
 
-//`https://timezoneapi.io/api/timezone/?${location}&token=aPiLSETrlzYAjvVkemPf`
+//`https://timezoneapi.io/api/timezone/?${location}&token=${process.env.TOKEN}`
 
 const TimeZoneThumb = ({ id, removeTimeZone, timezoneList, loading }) => {
   const [location, setLocation] = useState("Europe/Paris");
@@ -21,7 +21,7 @@ const TimeZoneThumb = ({ id, removeTimeZone, timezoneList, loading }) => {
     (async () => {
       try {
         const response = await fetch(
-          `http://api.timezonedb.com/v2.1/get-time-zone?key=3S8CT06GEKID&format=json&by=zone&zone=${location}`
+          `http://api.timezonedb.com/v2.1/get-time-zone?key=${process.env.KEY}&format=json&by=zone&zone=${location}`
         );
         const data = await response.json();
         const timestamp = data.timestamp;
